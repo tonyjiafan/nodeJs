@@ -4,13 +4,13 @@
 
 'use strict'
 const  express = require('express'),
-       home = require('../controller/home'),   //服务层(控制器)
-       about = require('../controller/about');   //服务层(控制器)
+       home = require('./controller/home'),   //服务层(控制器)
+       about = require('./controller/about');   //服务层(控制器)
 
 
 exports.setRequestUrl = (app) =>{
   app.get('/',function(req,res){
-    res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express</h1><h4 style="margin:50px 100px">欢迎来到nodeJs的世界</h4>')
+    res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express</h1><h4 style="margin:50px 100px;font-size:40px;">欢迎来到nodeJs的世界</h4>')
   });
 
   //home页路由   通过服务器渲染
