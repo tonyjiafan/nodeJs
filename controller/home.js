@@ -13,7 +13,7 @@ exports.renderHomePage = (req,res) =>{
       layout:'index',
       title:obj.title,
       infoData:obj,
-      seaModule:'/static/js/sea_module/home.js' ,  //没有使用模块化必须要配置完整的路劲和文件名
+      seaModule:'/static/js/sea_module/home/home.js' ,  //没有使用模块化必须要配置完整的路劲和文件名
       cssModule:'/static/css/css_module/home/home.css'   //没有使用模块化必须要配置完整的路劲和文件名
   })
 }

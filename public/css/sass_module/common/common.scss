@@ -1,0 +1,22 @@
+/* 引入sass模块 */
+@import "./header.scss";
+@import "./footer.scss";
+/*----------------------------------------------------------------------
+    公共的scss
+-----------------------------------------------------------------------*/
+body{
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,h6,ul{
+  margin: 0;
+  padding: 0;
+  text-align:center;
+}
+.content-warp{
+  outline:1px solid #999;
+  margin: 10px auto;
+  width: 1000px;
+  height: 800px;
+  background: white;
+}

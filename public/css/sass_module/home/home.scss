@@ -1,12 +1,35 @@
-body{
-  background: #fff;
-  button{
-    width: 150px;
-    height: 34px;
-    background: #fc5144;
-    border: 1px solid #fc7144;
-    border-radius: 8px;
-    outline: none;
-    color: white;
-  }
+/* 引入sass模块 */
+@import "../common/common.scss";
+/*----------------------------------------------------------------------
+    home页面的样式
+-----------------------------------------------------------------------*/
+/* 导航样式 */
+.nav-ul{
+  padding: 10px 0;
+}
+.nav-ul li{
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+.nav-ul li a{
+  display: block;
+  float: left;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: #666;
+}
+.nav-ul li a:hover{
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+
+button{
+  width: 150px;
+  height: 34px;
+  background: #fc5144;
+  border: 1px solid #fc7144;
+  border-radius: 8px;
+  outline: none;
+  color: white;
 }

@@ -5,6 +5,7 @@
 'use strict'
 const  express = require('express'),
        home = require('../controller/home'),   //服务层(控制器)
+       about = require('../controller/about'),   //服务层(控制器)
        router = express.Router();
 
 
@@ -20,11 +21,9 @@ router.get('/home',(req, res)=>{
 });
 
 
-//about页路由   渲染类
-router.get('/about' , function (req,res,callback) {
-    res.render('pages/about',{
-        title:'关于页面'     //传入页面的title
-    });
+//about页路由   通过服务器渲染
+router.get('/about',(req,res)=>{
+    about.renderAboutPage(req,res)
 });
 
 
