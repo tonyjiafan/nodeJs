@@ -1,0 +1,25 @@
+{
+  "name": "test_hbs",
+  "version": "1.0.0",
+  "description": "hbs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "jqs",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cookie-parser": "^1.4.3",
+    "express-handlebars": "^3.0.0",
+    "nodemon": "^1.9.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.1"
+  }
+}
