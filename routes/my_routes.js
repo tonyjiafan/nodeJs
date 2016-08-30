@@ -11,7 +11,7 @@ const  express = require('express'),
 
 
 router.get('/',function(req,res){
-	res.send('<h1 style="margin:50px 100px;color:#fc5144;font-weight:700;">Express</h1><h4 style="margin:50px 100px">欢迎来到nodeJs的世界</h4>')
+	res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express</h1><h4 style="margin:50px 100px">欢迎来到nodeJs的世界</h4>')
 });
 
 
@@ -28,11 +28,17 @@ router.get('/about',(req,res)=>{
 
 
 
-//++++++++++++++++++++++++++++++++++++
+/**************************************************
+*               数据类路由                          *
+**************************************************/
 
 // home页面的数据请求   数据类
 router.get('/home/inforData',(req,res)=>{
     home.postInforData(req,res)
+})
+// about页面的数据请求  数据类
+router.get('/about/getData',(req,res)=>{
+    about.getData(req,res)
 })
 
 

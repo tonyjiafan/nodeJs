@@ -25,5 +25,6 @@ exports.postInforData = (req,res) =>{
       data.age = '18';
       data.sex = 'man';
 
+      console.log(data)
       res.send(data)
 }

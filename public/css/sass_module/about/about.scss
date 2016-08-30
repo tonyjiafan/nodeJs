@@ -4,3 +4,31 @@
 /*----------------------------------------------------------------------
     About页面的样式
 -----------------------------------------------------------------------*/
+.about-box{
+  padding: 50px;
+  table {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+   }
+   table thead{
+     background: #f9f9f9;
+   }
+  table tr {
+      border-width: 1px;
+      padding: 10px 20px;
+      border-style: solid;
+      border-color: rgba(173, 175, 175, 0.52);
+      border-left: none;
+      border-right: none;
+   }
+   table td {
+      width: 280px;
+      height: 50px;
+      padding-left: 10px;
+      color:#666;
+   }
+}
