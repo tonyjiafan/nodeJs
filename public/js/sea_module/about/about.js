@@ -5,7 +5,8 @@ define(function(require,exports,module){
     $('#get_data').on('click',function(){
       console.log('about')
       $.ajax({
-        type:'GET',
+        type:'POST',
+        data:'',
         url:'/about/getData'
       }).done(function(data){
           console.log(data)

@@ -12,11 +12,11 @@ exports.renderAboutPage = (req,res)=>{
   })
 }
 
-exports.getData = (req,res)=>{
+exports.postData = (req,res)=>{
   let arry = [],obj = {};
       obj.name = '成都';
       obj.addres = '高新区';
-      obj.infor = '天府三街***广场';
+      obj.infor = '天府三街****广场';
       arry.push(obj)
         console.log(arry)
 

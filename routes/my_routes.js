@@ -33,12 +33,12 @@ router.get('/about',(req,res)=>{
 **************************************************/
 
 // home页面的数据请求   数据类
-router.get('/home/inforData',(req,res)=>{
+router.post('/home/inforData',(req,res)=>{
     home.postInforData(req,res)
 })
 // about页面的数据请求  数据类
-router.get('/about/getData',(req,res)=>{
-    about.getData(req,res)
+router.post('/about/getData',(req,res)=>{
+    about.postData(req,res)
 })
 
 

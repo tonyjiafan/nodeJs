@@ -6,8 +6,9 @@ define(function(require,exports,module){
   $('#btn').on('click',function(){
     console.log('start')
     $.ajax({
-       type:'GET',
+       type:'POST',
        url:'/home/inforData',
+       data:'',
        }).done(function(data){
          console.log(data)
          var name = data.name,
