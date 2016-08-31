@@ -9,6 +9,7 @@ const  express = require('express'),
 
 
 exports.setRequestUrl = (app) =>{
+  //首次加载的页面
   app.get('/',function(req,res){
     res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express</h1><h4 style="margin:50px 100px;font-size:40px;">欢迎来到nodeJs的世界</h4>')
   });
@@ -32,5 +33,7 @@ exports.setRequestUrl = (app) =>{
   app.post('/about/getData',(req,res)=>{
       about.postData(req,res)
   })
+
+
 
 }
