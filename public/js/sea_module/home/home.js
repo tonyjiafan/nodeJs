@@ -1,22 +1,20 @@
 define(function(require,exports,module){
   //引入模块
-  var $ = require('../../outerPlugin/jquery.min');
-
+  var $ = require('../../outerPlugin/jquery.min'),
+      util = require('../../util'),
+      reqAjax = util.reqAjax;
 
   $('#btn').on('click',function(){
-    console.log('start')
-    $.ajax({
-       type:'POST',
-       url:'/home/inforData',
-       data:'',
-       }).done(function(data){
-         console.log(data)
-         var name = data.name,
-             job = data.job,
-             age = data.age,
-             sex = data.sex;
-         $('#text_box').append('我是' + name + '我的职业是' + job + '我今年' + age + '岁')
-      })
-    })
+    var successFn = function(data){
+     $('#text_box').append('我是' + data.name + '我的职业是' + data.job + '我今年' + data.age + '岁')
+   }
+   reqAjax('POST','/home/inforData','',true,function(data){
+       if(data.success){
+           successFn(data)
+       }else {
+
+       }
+     })
+  })//click函数的闭合标签
 
 })

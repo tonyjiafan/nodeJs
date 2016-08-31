@@ -29,6 +29,7 @@ exports.postData = (req,res)=>{
                 </tr>`
       })
       data.html = html;
-      console.log(data)
+      data.success = true;
+      data.errMsg = '请将controller文件夹下的about.js文件的postData方法的  data.success = false改为true';
       res.send(data)
 }

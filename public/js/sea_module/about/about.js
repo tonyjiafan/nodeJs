@@ -1,17 +1,20 @@
 define(function(require,exports,module){
   //引入模块
-  var $ = require('../../outerPlugin/jquery.min');
+  var $ = require('../../outerPlugin/jquery.min'),
+      util = require('../../util'),
+      reqAjax = util.reqAjax;
 
     $('#get_data').on('click',function(){
-      console.log('about')
-      $.ajax({
-        type:'POST',
-        data:'',
-        url:'/about/getData'
-      }).done(function(data){
-          console.log(data)
+      var successFn = function(data){
           $('#tb_body').append(data.html)
-      })
+      }
+        reqAjax('POST','/about/getData','',true,function(data){
+            if(data.success){
+              successFn(data)
+            }else {
+
+            }
+        })
     })
 
 })

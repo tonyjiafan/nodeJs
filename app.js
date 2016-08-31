@@ -40,6 +40,8 @@ let handleStatusError = (status) => {
 		res.sendfile('views/pages/error/error.html')
 	})
 }
+handleStatusError(404)
+handleStatusError(500)
 
 
 app.listen(5000,function(){

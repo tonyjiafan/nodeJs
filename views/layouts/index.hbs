@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/css/outerPlugin/sweetalert.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href={{cssModule}} media="screen" title="no title" charset="utf-8">
 </head>
 <body>
@@ -19,6 +20,8 @@
   </footer>
 </body>
 <script src="/static/js/outerPlugin/sea.js" type="text/javascript"></script>
+<!-- 弹窗插件 -->
+<script src="/static/js/outerPlugin/sweetalert.min.js" type="text/javascript"></script>
 <!-- seajs 的全局配置  -->
 <script type="text/javascript">
             seajs.config({
@@ -29,5 +32,4 @@
             })
             seajs.use('{{seaModule}}')
     </script>
-
 </html>
