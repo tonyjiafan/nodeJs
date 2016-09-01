@@ -19,8 +19,11 @@
 
 # 启动方式
 
-    0.进入项目文件夹-终端输入-npm install (安装项目所依赖的包)
+​        1.进入项目文件夹-终端输入-npm install (安装项目所依赖的包)
 
-​	1.进入项目文件夹-终端输入-nodemon（mac下需sudo nodemon将权限提到最高）
+​	[热启动需要全局安装nodemon 另外nodeJS最好安装稳定版本]
 
-​	2.需要同时开启 -sass- 的监听   终端输入： gulp sass:watch  即可（然后任意修改下scss文件并保存）
+
+​	2.进入项目文件夹-终端输入-nodemon（mac下需sudo nodemon将权限提到最高）
+
+​	3.需要同时开启 -sass- 的监听   终端输入： gulp sass:watch  即可（然后任意修改下scss文件并保存）
