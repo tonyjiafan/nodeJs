@@ -32,7 +32,9 @@ exports.setRequestUrl = (app) =>{
   app.post('/about/getData',(req,res)=>{
       about.postData(req,res)
   })
-
-
+  //实验从-数据库-拿数据的路由
+  app.post('/home/postDataBase',(req,res)=>{
+      home.postDataBase(req,res)
+  })
 
 }

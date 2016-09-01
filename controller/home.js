@@ -2,7 +2,8 @@
 +		通过服务层渲染页面发送数据【在此层请求接口数据】              +
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 'use strict'
-const config = require('../config');  //接口文件
+// const config = require('../config');  //接口文件
+const database = require('./Dao/database');   //数据库模块
 
 //渲染home页面
 exports.renderHomePage = (req,res) =>{
@@ -13,7 +14,7 @@ exports.renderHomePage = (req,res) =>{
       layout:'index',
       title:obj.title,
       infoData:obj,
-      seaModule:'/static/js/sea_module/home/home.js' ,  //没有使用模块化必须要配置完整的路劲和文件名
+      seaModule:'/static/js/sea_module/home/home.js',  //没有使用模块化必须要配置完整的路劲和文件名
       cssModule:'/static/css/css_module/home/home.css'   //没有使用模块化必须要配置完整的路劲和文件名
   })
 }
@@ -29,4 +30,16 @@ exports.postInforData = (req,res) =>{
 
       console.log(data)
       res.send(data)
+}
+
+// 请求持久层 数据库
+exports.postDataBase = (req,res) =>{
+  let jsonData = req.body.param,
+      paramObj = JSON.parse(jsonData);
+      database.query("select * from t_user t where t. u_name = ?",[paramObj.username],function(data) {
+        var msg = {};
+            msg.success = true;
+            msg.data = data;
+        res.send(msg);
+   })
 }

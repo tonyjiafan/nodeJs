@@ -1,6 +1,8 @@
 'use strict'
 
-const config = require('../config');  //接口文件
+// const config = require('../config');  //接口文件
+const database = require('./Dao/database');  //数据库模块
+
 
 //渲染About 页面
 exports.renderAboutPage = (req,res)=>{
@@ -18,7 +20,6 @@ exports.postData = (req,res)=>{
       obj.addres = '高新区';
       obj.infor = '天府三街****广场';
       arry.push(obj)
-      console.log(arry)
 
   let htmlData = arry,html = '',data = {};
       htmlData.forEach(function(element,index){

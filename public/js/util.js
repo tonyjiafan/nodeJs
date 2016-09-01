@@ -6,7 +6,7 @@ define(function(require,exports,module){
     $.ajax({
              type:type,
              url:url,
-             data:data,
+             data:{param:data},
              datatype:'json',
              async:async
              }).done(function(data){
@@ -21,7 +21,7 @@ define(function(require,exports,module){
             confirmButtonColor:'#10aef2'});
             setTimeout(function(){
                   location.reload();
-                },3000);
+                },10000);
     })
   }
 

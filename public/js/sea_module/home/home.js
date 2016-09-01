@@ -23,4 +23,26 @@ define(function(require,exports,module){
      })
   })//click函数的闭合标签
 
+  //实验连接数据库
+  $('input[name=username]').on('blur',function(){
+    var username = $(this).val(),param = {};
+        param.username = username;
+    var jsonData = JSON.stringify(param)
+    console.log(jsonData);
+    reqAjax('POST','/home/postDataBase',jsonData,true,function(data){
+        if(data.success){
+          console.log(data)
+          // successFn(data);
+        }else {
+
+        }
+      })
+  })
+
+
+
+
+
+
+
 })
