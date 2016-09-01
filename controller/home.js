@@ -20,7 +20,7 @@ exports.renderHomePage = (req,res) =>{
 
 exports.postInforData = (req,res) =>{
   let data = {};
-      data.success = false;
+      data.success = true;
       data.errMsg = '请将controller文件夹下的home.js文件的postInforData方法的  data.success = false改为true';
       data.name = 'tonyjiafan';
       data.job = 'web前端';

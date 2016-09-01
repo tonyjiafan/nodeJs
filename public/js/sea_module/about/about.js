@@ -10,7 +10,13 @@ define(function(require,exports,module){
       }
         reqAjax('POST','/about/getData','',true,function(data){
             if(data.success){
-              successFn(data)
+              swal({title:'Success',
+                  text:"请求数据成功!",
+                  type:"success",
+                  // confirmButtonText:'确认',
+                  showConfirmButton:false,
+                  confirmButtonColor:'#fc5144',
+                  timer:1000}),successFn(data);
             }else {
 
             }

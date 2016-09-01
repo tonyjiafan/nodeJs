@@ -18,7 +18,7 @@ exports.postData = (req,res)=>{
       obj.addres = '高新区';
       obj.infor = '天府三街****广场';
       arry.push(obj)
-        console.log(arry)
+      console.log(arry)
 
   let htmlData = arry,html = '',data = {};
       htmlData.forEach(function(element,index){
