@@ -53,9 +53,40 @@ define(function(require,exports,module){
           }
         })
     } //else 闭合标记
-
   })
 
+  //登录验证
+  $('#go_about').on('click',function(){
+    console.log('sssssssss')
+    if($('input[name=username]').val() == '' || $('input[name=password]').val() == ''){
+      swal({
+          title:'错误',
+          text:"用户名或密码不能为空!",
+          type:"warning",
+          confirmButtonText:'确认',
+          // showConfirmButton:false,
+          confirmButtonColor:'#fc5144'})
+    } else {
+      var successFn = function(data){
+          location.href = '/about';
+      }
+
+      var password = $('input[name=password]').val(),
+          username = $('input[name=username]').val(),
+          param = {};
+          param.username = username;
+          param.password = password;
+      var jsonData = JSON.stringify(param);
+
+      reqAjax('POST','/home/login',jsonData,true,function(data){
+          if(data.success){
+            successFn(data);
+          } else {
+          }
+        })
+    } //else 闭合标记
+
+  })
 
 
 

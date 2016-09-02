@@ -42,4 +42,22 @@ exports.postDataBase = (req,res) =>{
             msg.data = data;
         res.send(msg);
    })
+ }
+// 登录验证
+exports.postLogin = (req,res) =>{
+    let jsonData = req.body.param,
+        paramObj = JSON.parse(jsonData);
+        console.log(paramObj)
+    database.query("select * from t_user t where t. u_name = ? and t.u_pwd = ?",[paramObj.username,paramObj.password], function (data) {
+      if(data.length == 1){
+        var msg = {};
+            msg.success = true;
+            msg.data = data;
+        res.send(msg);
+      } else {
+        var data = {};
+        data.errMsg = '用户名或密码错误！';
+        res.send(data)
+      }
+  })
 }

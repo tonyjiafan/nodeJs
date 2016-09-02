@@ -36,5 +36,12 @@ exports.setRequestUrl = (app) =>{
   app.post('/home/postDataBase',(req,res)=>{
       home.postDataBase(req,res)
   })
+  //实验从-login
+  app.post('/home/login',(req,res)=>{
+      home.postLogin(req,res)
+  })
+
+
+
 
 }
