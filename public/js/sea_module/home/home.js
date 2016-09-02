@@ -25,14 +25,19 @@ define(function(require,exports,module){
 
   //实验连接数据库
   $('input[name=username]').on('blur',function(){
+    var successFn = function(data){
+        console.log(data)
+    }
+
+
     var username = $(this).val(),param = {};
         param.username = username;
-    var jsonData = JSON.stringify(param)
+    var jsonData = JSON.stringify(param);
     console.log(jsonData);
     reqAjax('POST','/home/postDataBase',jsonData,true,function(data){
         if(data.success){
-          console.log(data)
-          // successFn(data);
+          // console.log(data)
+          successFn(data);
         }else {
 
         }
