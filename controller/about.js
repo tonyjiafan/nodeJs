@@ -1,5 +1,4 @@
 'use strict'
-
 // const config = require('../config');  //接口文件
 const database = require('./Dao/database');  //数据库模块
 
@@ -24,13 +23,38 @@ exports.postData = (req,res)=>{
   let htmlData = arry,html = '',data = {};
       htmlData.forEach(function(element,index){
       html +=   `<tr>
-                  <td>${element.name}</td>
-                  <td>${element.addres}</td>
-                  <td>${element.infor}</td>
+                  <td style="color:#fc5144">${element.name}</td>
+                  <td style="color:#fc5144">${element.addres}</td>
+                  <td style="color:#fc5144">${element.infor}</td>
                 </tr>`
       })
       data.html = html;
       data.success = true;
       data.errMsg = '请将controller文件夹下的about.js文件的postData方法的  data.success = false改为true';
       res.send(data)
+}
+
+// 获取about列表
+exports.getListData = (req,res) =>{
+   database.query("select * from t_product",[],function (data) {
+     console.log(data)
+      if(data.length > 0){
+        var msg = {},html='';
+            data.forEach(function(element,index){
+            html +=   `<tr>
+                        <td style="color:green">${element.p_brand}</td>
+                        <td style="color:#444">${element.p_name}</td>
+                        <td style="color:#fc5144">${element.p_price}元</td>
+                        <td><img style="width:50px;" src="/static/images/list/${element.p_index_imgLIST}"></td>
+                      </tr>`
+            })
+            msg.success = true;
+            msg.html = html;
+        res.send(msg);
+      } else {
+        var data = {};
+        data.errMsg = '没有商品信息！';
+        res.send(data)
+      }
+  })
 }

@@ -36,11 +36,14 @@ exports.setRequestUrl = (app) =>{
   app.post('/home/postDataBase',(req,res)=>{
       home.postDataBase(req,res)
   })
-  //实验从-login
+  //home页实验从-login
   app.post('/home/login',(req,res)=>{
       home.postLogin(req,res)
   })
-
+  // about页面 获取列表
+  app.get('/about/getListData',(req,res)=>{
+      about.getListData(req,res)
+  })
 
 
 
