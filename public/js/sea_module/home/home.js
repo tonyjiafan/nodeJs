@@ -10,14 +10,15 @@ define(function(require,exports,module){
    }
    reqAjax('POST','/home/inforData','',true,function(data){
        if(data.success){
-         swal({title:'Success',
+         swal({
+             title:'Success',
              text:"请求数据成功!",
              type:"success",
              // confirmButtonText:'确认',
              showConfirmButton:false,
              confirmButtonColor:'#fc5144',
              timer:1000}),successFn(data);
-       }else {
+       } else {
 
        }
      })
@@ -25,23 +26,34 @@ define(function(require,exports,module){
 
   //实验连接数据库
   $('input[name=username]').on('blur',function(){
-    var successFn = function(data){
-        console.log(data)
-    }
+    if($(this).val() == ''){
+      swal({
+          title:'错误',
+          text:"用户名不能为空!",
+          type:"warning",
+          confirmButtonText:'确认',
+          // showConfirmButton:false,
+          confirmButtonColor:'#fc5144'})
+    } else {
+      var successFn = function(data){
+        var data = data.data[0],
+            pwd = data.u_pwd;
+            $('input[name=password]').val(pwd);
+      }
 
+      var username = $(this).val(),param = {};
+          param.username = username;
+      var jsonData = JSON.stringify(param);
 
-    var username = $(this).val(),param = {};
-        param.username = username;
-    var jsonData = JSON.stringify(param);
-    console.log(jsonData);
-    reqAjax('POST','/home/postDataBase',jsonData,true,function(data){
-        if(data.success){
-          // console.log(data)
-          successFn(data);
-        }else {
+      reqAjax('POST','/home/postDataBase',jsonData,true,function(data){
+          if(data.success){
+            successFn(data);
+          } else {
 
-        }
-      })
+          }
+        })
+    } //else 闭合标记
+
   })
 
 
@@ -50,4 +62,4 @@ define(function(require,exports,module){
 
 
 
-})
+}) //define闭合标记

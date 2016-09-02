@@ -23,7 +23,9 @@
   background: rgba(0,0,0,0.1);
   border-radius: 3px;
 }
-
+p{
+  text-align: center;
+}
 button{
   width: 150px;
   height: 34px;
@@ -32,6 +34,13 @@ button{
   border-radius: 8px;
   outline: none;
   color: white;
+  margin: 10px 0;
+}
+.login{
+  margin-top: 100px;
+  border: 1px solid #fc5144;
+  padding: 20px;
+  text-align: center;
 }
 input{
   width: 200px;
@@ -40,5 +49,8 @@ input{
   color:blue;
   border: 2px solid #999;
   border-radius: 5px;
-  margin-left: 300px;
+}
+h3{
+  color: #fc5144;
+  padding: 5px;
 }

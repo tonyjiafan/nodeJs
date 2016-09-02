@@ -2,6 +2,7 @@
 
 var mysql = require("mysql");
 
+//连接本地数据库
 function getConn(){
     return mysql.createConnection({
         host:"localhost",
@@ -12,7 +13,8 @@ function getConn(){
     });
 }
 
-var query = function (sql,params,callback) {
+//查询mysql数据库的方法
+exports.query = function (sql,params,callback) {
     var conn = getConn();
     conn.query(sql,params, function (err,data) {
         if(err){
@@ -23,7 +25,3 @@ var query = function (sql,params,callback) {
     });
     conn.end();
 };
-
-
-
-exports.query = query;
