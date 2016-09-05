@@ -31,3 +31,15 @@
 ​	2.进入项目文件夹-终端输入-nodemon（mac下需sudo nodemon将权限提到最高）
 
 ​	3.需要同时开启 -sass- 的监听   终端输入： gulp sass:watch  即可（然后任意修改下scss文件并保存）
+
+
+
+<img src="https://github.com/tonyjiafan/nodeJs/blob/master/introImg/1.png" />
+
+
+
+<img src="https://github.com/tonyjiafan/nodeJs/blob/master/introImg/2.png" />
+
+
+
+<img src="https://github.com/tonyjiafan/nodeJs/blob/master/introImg/3.png" />
