@@ -4,7 +4,8 @@
 'use strict'
 const  express = require('express'),
        home = require('./controller/home'),   //服务层(控制器)
-       about = require('./controller/about');   //服务层(控制器)
+       about = require('./controller/about'),   //服务层(控制器)
+       details = require('./controller/details');   //服务层(控制器)
 
 
 exports.setRequestUrl = (app) =>{
@@ -20,6 +21,10 @@ exports.setRequestUrl = (app) =>{
   //about页路由   通过服务器渲染
   app.get('/about',(req,res)=>{
       about.renderAboutPage(req,res)
+  });
+  //details页路由   通过服务器渲染
+  app.get('/details',(req,res)=>{
+      details.renderDetailsPage(req,res)
   });
   /*++++++++++++++++++++++++++++++++++++++++++++++++++
   *               数据类路由                          *

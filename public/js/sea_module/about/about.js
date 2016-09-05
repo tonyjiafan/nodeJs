@@ -26,16 +26,21 @@ define(function(require,exports,module){
     // 获取商品
     $('#get_list').on('click',function(){
       var successFn = function(data){
-        console.log(data)
         $('#tb_body2').append(data.html)
       }
         reqAjax('GET','/about/getListData',null,true,function(data){
             if(data.success){
               successFn(data);
-            }else {
+            } else {
 
             }
         })
     })
+
+
+
+
+
+
 
 })

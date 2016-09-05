@@ -26,6 +26,7 @@ exports.postData = (req,res)=>{
                   <td style="color:#fc5144">${element.name}</td>
                   <td style="color:#fc5144">${element.addres}</td>
                   <td style="color:#fc5144">${element.infor}</td>
+                  <td style="color:#fc5144"></td>
                 </tr>`
       })
       data.html = html;
@@ -37,7 +38,7 @@ exports.postData = (req,res)=>{
 // 获取about列表
 exports.getListData = (req,res) =>{
    database.query("select * from t_product",[],function (data) {
-     console.log(data)
+    //  console.log(data)
       if(data.length > 0){
         var msg = {},html='';
             data.forEach(function(element,index){
@@ -46,6 +47,12 @@ exports.getListData = (req,res) =>{
                         <td style="color:#444">${element.p_name}</td>
                         <td style="color:#fc5144">${element.p_price}元</td>
                         <td><img style="width:50px;" src="/static/images/list/${element.p_index_imgLIST}"></td>
+                        <td><a style="color: white;
+                        padding: 10px 30px;
+                        display:inline-block;
+                        text-decoration: none;
+                        background: #fc5144;
+                        border-radius:5px;" href="/details?p_id=${element.p_id}">查看详情</a></td>
                       </tr>`
             })
             msg.success = true;

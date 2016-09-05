@@ -13,6 +13,9 @@ h1,h2,h3,h4,h5,h6,ul{
   padding: 0;
   text-align:center;
 }
+.clear{
+  clear: both;
+}
 .content-warp{
   outline:1px solid #999;
   margin: 10px auto;
