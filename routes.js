@@ -11,7 +11,13 @@ const  express = require('express'),
 exports.setRequestUrl = (app) =>{
   //首次加载的页面
   app.get('/',function(req,res){
-    res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express</h1><h4 style="margin:50px 100px;font-size:40px;">欢迎来到nodeJs的世界</h4>')
+    if (req.cookies.isVisit) {
+    console.log(req.cookies);
+    res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express欢迎再次访问</h1>');
+    } else {
+      res.cookie('isVisit', 1, {maxAge: 60 * 1000});
+      res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express</h1><h4 style="margin:50px 100px;font-size:40px;">欢迎第一次来到nodeJs的世界</h4>');
+    }
   });
 
   //home页路由   通过服务器渲染

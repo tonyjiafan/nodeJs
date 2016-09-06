@@ -2,9 +2,10 @@
 +		通过服务层渲染页面发送数据【在此层请求接口数据】              +
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 'use strict'
-// const config = require('../config');  //接口文件
-const database = require('./Dao/database');   //数据库模块
-
+const config = require('../config'), //接口文件
+      database = require('./Dao/database'),   //数据库模块
+      nodeCookie = require('./util/cookie');
+ let  nodeCookie = new nodeCookie();
 //渲染home页面
 exports.renderHomePage = (req,res) =>{
   let obj = {};
@@ -47,15 +48,24 @@ exports.postDataBase = (req,res) =>{
 exports.postLogin = (req,res) =>{
     let jsonData = req.body.param,
         paramObj = JSON.parse(jsonData);
-        console.log(paramObj)
     database.query("select * from t_user t where t. u_name = ? and t.u_pwd = ?",[paramObj.username,paramObj.password], function (data) {
       if(data.length == 1){
-        var msg = {};
+        let saveCookie = {};
+            saveCookie.u_id = data[0].u_id;
+            saveCookie.u_name = data[0].u_name;
+            saveCookie.u_pwd = data[0].u_pwd;
+        let	saveCookieData = JSON.stringify(saveCookie);
+        console.log(saveCookieData)
+        //将返回的数据存入cookie
+        nodeCookie.addCookie(res,config.userCookie,saveCookieData)
+        let msg = {};
             msg.success = true;
             msg.data = data;
+            msg.cookieData = saveCookieData;
         res.send(msg);
+
       } else {
-        var data = {};
+        let data = {};
         data.errMsg = '用户名或密码错误！';
         res.send(data)
       }

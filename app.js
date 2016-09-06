@@ -12,11 +12,11 @@ const  express = require('express'),
 
 //请求主体解析
 app.use(bodyParser.json());
-
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //cookie解析
 app.use(cookieParser());
+
 
 //使用static中间件 制定public目录为静态资源目录,其中资源不会经过任何处理
 app.use('/static',express.static(__dirname + '/public'));

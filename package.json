@@ -17,6 +17,8 @@
     "body-parser": "^1.15.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.13.3",
+    "set-cookie": "0.0.4",
+    "sha1": "^1.1.1",
     "express-handlebars": "^3.0.0",
     "nodemon": "^1.9.2"
   },

@@ -68,7 +68,8 @@ define(function(require,exports,module){
           confirmButtonColor:'#fc5144'})
     } else {
       var successFn = function(data){
-          location.href = '/about';
+        console.log(data)
+          // location.href = '/about';
       }
 
       var password = $('input[name=password]').val(),
