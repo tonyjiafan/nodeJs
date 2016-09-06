@@ -69,7 +69,7 @@ define(function(require,exports,module){
     } else {
       var successFn = function(data){
         console.log(data)
-          // location.href = '/about';
+          location.href = '/about';
       }
 
       var password = $('input[name=password]').val(),
