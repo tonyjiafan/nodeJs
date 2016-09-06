@@ -4,8 +4,10 @@
 'use strict'
 const config = require('../config'), //接口文件
       database = require('./Dao/database'),   //数据库模块
-      nodeCookie = require('./util/cookie');
- let  nodeCookie = new nodeCookie();
+      cookie = require('./util/cookie');  //引入cookie模块
+ let  nodeCookie = new cookie();  //实例化
+
+
 //渲染home页面
 exports.renderHomePage = (req,res) =>{
   let obj = {};
