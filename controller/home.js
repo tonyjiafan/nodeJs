@@ -57,7 +57,7 @@ exports.postLogin = (req,res) =>{
             saveCookie.u_name = data[0].u_name;
             saveCookie.u_pwd = data[0].u_pwd;
         let	saveCookieData = JSON.stringify(saveCookie);
-        console.log(saveCookieData)
+        console.log('我是存储在cookie中的' +  saveCookieData)
         //将返回的数据存入cookie
         nodeCookie.addCookie(res,config.userCookie,saveCookieData)
         let msg = {};
