@@ -28,7 +28,7 @@
 ​	[热启动需要全局安装nodemon 另外nodeJS最好安装稳定版本]
 
 
-​	2.进入项目文件夹-终端输入-nodemon（mac下需sudo nodemon将权限提到最高）
+​	2.进入项目文件夹-终端输入 mac 下需 sudo npm run dev将权限提到最高   [在win下 -npm run dev  不能运行就以管理员身份运行]
 
 ​	3.需要同时开启 -sass- 的监听   终端输入： gulp sass:watch  即可（然后任意修改下scss文件并保存）
 
