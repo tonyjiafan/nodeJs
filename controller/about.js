@@ -5,11 +5,19 @@ const database = require('./Dao/database');  //数据库模块
 
 //渲染About 页面
 exports.renderAboutPage = (req,res)=>{
-  res.render('pages/about',{
-      layout:'index',
-      title:'About',
-      seaModule:'/static/js/sea_module/about/about.js' ,  //没有使用模块化必须要配置完整的路劲和文件名
-      cssModule:'/static/css/css_module/about/about.css'   //没有使用模块化必须要配置完整的路劲和文件名
+  database.query("select * from t_product",[],function (data) {
+    let productObj = data,addressObj = {};
+        addressObj.name = '成都';
+        addressObj.addres = '高新区';
+        addressObj.infor = '天府三街****广场';
+    res.render('pages/about',{
+        layout:'index',
+        title:'About',
+        product:productObj,
+        address:addressObj,
+        seaModule:'/static/js/sea_module/about/about.js' ,  //没有使用模块化必须要配置完整的路劲和文件名
+        cssModule:'/static/css/css_module/about/about.css'   //没有使用模块化必须要配置完整的路劲和文件名
+    })
   })
 }
 
@@ -38,7 +46,7 @@ exports.postData = (req,res)=>{
 // 获取about列表
 exports.getListData = (req,res) =>{
    database.query("select * from t_product",[],function (data) {
-    //  console.log(data)
+     console.log(data)
       if(data.length > 0){
         var msg = {},html='';
             data.forEach(function(element,index){

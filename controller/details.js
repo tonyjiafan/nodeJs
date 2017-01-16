@@ -8,7 +8,6 @@ exports.renderDetailsPage = (req,res)=>{
       param.p_id = Number(req.query.p_id)
       database.query("select * from t_product where p_id=?",[param.p_id],function (data) {
         let detailsData = data[0];
-        console.log(detailsData)
         res.render('pages/details',{
             layout:'index',
             title:'商品详情',
