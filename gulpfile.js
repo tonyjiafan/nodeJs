@@ -19,16 +19,16 @@ var gulp = require('gulp'),
         .pipe(webserver({ // 运行gulp-webserver
             port:8000,   //默认端口号是8080
             livereload: true, // 启用LiveReload
-            open: 'http://localhost:5000/home' // 服务器启动时自动打开网页
+            open: 'http://localhost:5000/' // 服务器启动时自动打开网页
             // open: true // 服务器启动时自动打开网页
         }));
     });
     // 监听任务
     gulp.task('watch', function () {
-      let date = new Date();
         gulp.watch('./**', function (file) {  //要监听的文件目录
-            livereload.changed(file.path);
-            console.log(date + "=>执行监听变化成功" );
+          let date = new Date();
+          livereload.changed(file.path);
+          console.log(date + "=>监听变化成功" );
         });
 
     });

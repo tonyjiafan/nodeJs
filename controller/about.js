@@ -59,8 +59,8 @@ exports.getListData = (req,res) =>{
                         padding: 10px 30px;
                         display:inline-block;
                         text-decoration: none;
-                        background: #fc5144;
-                        border-radius:5px;" href="/details?p_id=${element.p_id}">查看详情</a></td>
+                        background: #ff8000;
+                        border-radius:3px;" href="/details?p_id=${element.p_id}">查看详情</a></td>
                       </tr>`
             })
             msg.success = true;

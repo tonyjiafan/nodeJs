@@ -13,10 +13,10 @@ exports.setRequestUrl = (app) =>{
   app.get('/',function(req,res){
     if (req.cookies.isVisit) {
     console.log(req.cookies);
-    res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express欢迎再次访问</h1>');
+    res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express欢迎再次访问</h1><a style="display: inline-block;background: #ff4000;border: 1px solid #fc7144;border-radius: 3px;color: white;margin: 10px 100px;padding: 10px 40px;" href="/home">Express</a>');
     } else {
       res.cookie('isVisit', 1, {maxAge: 60 * 1000});
-      res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express</h1><h4 style="margin:50px 100px;font-size:40px;">欢迎第一次来到nodeJs的世界</h4>');
+      res.send('<h1 style="margin:50px 100px;font-size:100px;color:#fc5144;font-weight:700;">Express</h1><h4 style="margin:50px 100px;font-size:40px;">欢迎第一次来到nodeJs的世界</h4><a style="display: inline-block;background: #ff4000;border: 1px solid #fc7144;border-radius: 3px;color: white;margin: 10px 100px;padding: 10px 40px;" href="/home">Express</a>');
     }
   });
 
