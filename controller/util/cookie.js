@@ -1,11 +1,11 @@
 'use strict'
-const jiami = require('./jiami');
+const secret = require('./secret');
 //服务器 - cookie操作
 
 class nodeCookie {
 //添加cookie
 	addCookie(res,name,data){
-		let baseStr = jiami.encryptAes(data,'jiafan') //nodejs加密cookie
+		let baseStr = secret.encryptAes(data,'jiafan') //nodejs加密cookie
 		res.cookie(name,baseStr,{maxAge:7*24*60*60*1000, path:'/'});
 	}
 //添加cookie(未加密)
@@ -29,7 +29,7 @@ class nodeCookie {
 		if(data == undefined){
 			return data
 		} else {
-		    data = JSON.parse(jiami.decryptAes(data,'jiafan')) //nodejs解密cookie
+		    data = JSON.parse(secret.decryptAes(data,'jiafan')) //nodejs解密cookie
 		    return data
 		}
 	}
