@@ -8,7 +8,7 @@ function getConn(){
         host:"localhost",
         port:"3306",
         user:"root",
-        password:"1111111",  //你的mysql root密码
+        password:"111111",  //你的mysql root密码
         database:"yohobuy"   //你的额数据库名称
     });
 }

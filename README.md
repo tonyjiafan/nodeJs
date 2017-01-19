@@ -30,7 +30,7 @@ b.作为项目的开发依赖（devDependencies）安装：
 
 c.使用命令来查看你已经安装的npm包
 
-　　 npm list -g -depth 0，如果你看到下面两项，恭喜你安装成功。
+　　 npm list -g -depth 0
 
 【具体配置进入gulpfile.js中查看 要注意引入gulp-webserver这个模块】
 
@@ -48,9 +48,9 @@ c.使用命令来查看你已经安装的npm包
 ​	[热启动需要全局安装nodemon 另外nodeJS最好安装稳定版本]
 
 
-​	2.进入项目文件夹-终端输入 mac 下需 sudo npm run dev将权限提到最高   [在win下 -npm run dev  不能运行就以管理员身份运行]
+​	2.进入项目文件夹-终端 mac 下需输入 sudo npm run dev将权限提到最高   [在win下 -npm run dev  不能运行就以管理员身份运行]
 
-​	3.需要同时开启 -sass- 的监听   终端输入： gulp sass:watch  即可（然后任意修改下scss文件并保存）
+​	3.可以单独开启监听sass的任务  终端输入： gulp sass:watch  即可（然后任意修改下scss文件并保存）
 
 ​	4.也可直接  终端输入：gulp start 已经配置好监听所有文件，有变化的时候会直接重新执行任务，浏览器页面也会自动实时刷新。
 
