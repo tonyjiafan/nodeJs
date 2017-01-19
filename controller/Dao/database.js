@@ -10,8 +10,8 @@ function getConn(){
         user:"root",
         password:"111111",  //你的mysql root密码
         database:"yohobuy"   //你的额数据库名称
+      })
 }
-
 //查询mysql数据库的方法
 exports.query = function (sql,params,callback) {
     var conn = getConn();
