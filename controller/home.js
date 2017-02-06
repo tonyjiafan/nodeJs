@@ -11,7 +11,7 @@ const config = require('../config'), //接口文件
 //渲染home页面
 exports.renderHomePage = (req,res) =>{
   let obj = {};
-      obj.title = 'home主页';
+      obj.title = 'Home';
       obj.info = '我是从服务层传送过来的';
   res.render('pages/home',{
       layout:'index',

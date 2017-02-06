@@ -10,7 +10,7 @@ exports.renderDetailsPage = (req,res)=>{
         let detailsData = data[0];
         res.render('pages/details',{
             layout:'index',
-            title:'商品详情',
+            title:'DetailsPage',
             data:detailsData,
             seaModule:'/static/js/sea_module/details/details.js',  //没有使用模块化必须要配置完整的路劲和文件名
             cssModule:'/static/css/css_module/details/details.css'   //没有使用模块化必须要配置完整的路劲和文件名
