@@ -57,7 +57,6 @@ define(function(require,exports,module){
 
   //登录验证
   $('#go_about').on('click',function(){
-    console.log('sssssssss')
     if($('input[name=username]').val() == '' || $('input[name=password]').val() == ''){
       swal({
           title:'错误',
