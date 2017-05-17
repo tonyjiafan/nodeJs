@@ -6,6 +6,7 @@ const  express = require('express'),
        home = require('./controller/home'),   //服务层(控制器)
        about = require('./controller/about'),
        details = require('./controller/details'),
+       introduction = require('./controller/introduction'),
        test = require('./controller/test');
 
 
@@ -25,6 +26,10 @@ exports.setRequestUrl = (app) =>{
   app.get('/home',(req, res)=>{
       home.renderHomePage(req,res)
   });
+  //Introduction页路由   通过服务器渲染
+  app.get('/introduction',(req, res)=>{
+      introduction.introductionPage(req,res)
+  });
   //about页路由   通过服务器渲染
   app.get('/about',(req,res)=>{
       about.renderAboutPage(req,res)
@@ -37,6 +42,8 @@ exports.setRequestUrl = (app) =>{
   app.get('/test',(req,res)=>{
       test.renderTestPage(req,res)
   });
+
+
   /*++++++++++++++++++++++++++++++++++++++++++++++++++
   *               数据类路由                          *
   ++++++++++++++++++++++++++++++++++++++++++++++++++*/

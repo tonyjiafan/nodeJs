@@ -19,7 +19,7 @@ var gulp = require('gulp'),
         .pipe(webserver({ // 运行gulp-webserver
             port:8000,   //默认端口号是8080
             livereload: true, // 启用LiveReload
-            open: 'http://localhost:5000/' // 服务器启动时自动打开网页
+            // open: 'http://localhost:5000/' // 服务器启动时自动打开网页
             // open: true // 服务器启动时自动打开网页
         }));
     });
