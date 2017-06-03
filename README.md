@@ -45,9 +45,9 @@ https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkigh
     这个项目结构的搭建还有很多不足之处，还需要不断地改进！
 
 
-# 启动方式
+## 启动方式
 
-​ 1.进入项目文件夹-终端输入-npm install (安装项目所依赖的包)
+​   1.进入项目文件夹-终端输入-npm install (安装项目所依赖的包)
 
 ​	[热启动需要全局安装nodemon 另外nodeJS最好安装稳定版本]
 
@@ -57,8 +57,8 @@ https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkigh
 ​	3.可以单独开启监听sass的任务  终端输入： gulp sass:watch  即可（然后任意修改下scss文件并保存）
 
 ​	4.也可直接  终端输入：gulp start 已经配置好监听所有文件，有变化的时候会直接重新执行任务，浏览器页面也会自动实时刷新。
-​
- 5.也可直接  终端输入：gulp webserver 启动 livereload。
+
+​   5.也可直接  终端输入：gulp webserver 启动 livereload。
 
 
 <img src="https://github.com/tonyjiafan/nodeJs/blob/master/introImg/1.png" />
