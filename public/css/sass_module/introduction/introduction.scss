@@ -338,3 +338,34 @@ header p {
   font-size: 25px;
   width: 100%;
 }
+
+
+/* flex1 */
+.flex-list{
+  // width: 100%;
+  background: #f6f6f6;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+  flex-flow: flex-wrap;
+  justify-content: flex-start ;
+  align-items: flex-start ;
+  align-content: flex-start;
+  .item{
+    text-align: center;
+    border: 1px solid #fc5144;
+    flex-basis: auto; /* default auto */
+    order: 1;
+    flex: (1 auto 1);
+    align-self: auto;
+  }
+  .item:nth-child(1),.item:nth-child(3){
+    background: #01aef2;
+    flex-grow: 0; /* default 0 */
+  }
+  .item:nth-child(2){
+    background: #edf23f;
+    flex-shrink: 1; /* default 1 */
+  }
+}
