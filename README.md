@@ -2,7 +2,7 @@
 
 nodeJs学习过程中自己练习的demo
 
-# 主要的一些技术和工具：
+## 主要的一些技术和工具：
 
 ​	1.nodemon
 
@@ -18,7 +18,7 @@ nodeJs学习过程中自己练习的demo
 
 ​	7.项目文件夹中yoho.sql的文件,需要导入到mysql中具体的配置请进入database.js中进行。
 
-# gulp-livereload 实时刷新web页面，大大节省了开发时间，不用手动刷新你懂得
+## gulp-livereload 实时刷新web页面，大大节省了开发时间，不用手动刷新你懂得
 
 a.全局安装 gulp：
 
@@ -35,7 +35,9 @@ c.使用命令来查看你已经安装的npm包
 【具体配置进入gulpfile.js中查看 要注意引入gulp-webserver这个模块】
 
 google浏览器livereload的插件地址
+
 https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
+
 ====安装后会出现一个圆圈图标点击后可将圆心变为实心这个代表已经开始实时监听刷新
 
 <img src="https://github.com/tonyjiafan/nodeJs/blob/master/introImg/4.png" />
@@ -57,6 +59,7 @@ https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkigh
 ​	4.也可直接  终端输入：gulp start 已经配置好监听所有文件，有变化的时候会直接重新执行任务，浏览器页面也会自动实时刷新。
 ​
  5.也可直接  终端输入：gulp webserver 启动 livereload。
+
 
 <img src="https://github.com/tonyjiafan/nodeJs/blob/master/introImg/1.png" />
 
