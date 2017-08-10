@@ -2,7 +2,9 @@
 
 
 
-##### 主要的一些技术和工具
+#### 主要技术
+
+* express
 
 * nodemon
 
@@ -17,14 +19,14 @@
 * express-mysql
 
   ```
-  数据库,控制层下的Dao中的database.js。操作数据库查询获取数据需要掌握一些基础的sql的查询语句
+  数据库,控制层下的Dao中的database.js，操作数据库查询获取数据需要掌握一些基础的sql的查询语句。
   ```
 
 * 项目文件夹中yoho.sql的文件,需要导入到mysql中具体的配置请进入database.js中进行
 
 
 
-##### gulp-livereload 实时刷新web页面，大大节省了开发时间，不用手动刷新你懂得
+#### gulp-livereload 实时刷新web页面,不用手动刷新你懂得!
 
 * 全局安装 gulp：
 
@@ -53,10 +55,12 @@ npm install gulp gulp-livereload --save-dev 
 
 * 具体配置进入gulpfile.js中查看 要注意引入gulp-webserver这个模块
 
+  ​
+
     这个项目结构的搭建还有很多不足之处，还需要不断地改进！
 
 
-##### 启动方式
+#### 启动方式
 
 * 安装依赖
 
@@ -87,7 +91,7 @@ npm install gulp gulp-livereload --save-dev 
 
   ​
 
-  ##### 项目截图
+  #### 项目截图
 
 
 <img src="https://github.com/tonyjiafan/nodeJs/blob/master/introImg/1.png" />
