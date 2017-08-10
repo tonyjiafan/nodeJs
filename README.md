@@ -1,64 +1,93 @@
-# nodeJs
+# NodeJs
 
-nodeJs学习过程中自己练习的demo
 
-## 主要的一些技术和工具：
 
-​	1.nodemon
+##### 主要的一些技术和工具
 
-​	2.sass
+* nodemon
 
-​	3.seaJs
+* sass
 
-​	4.gulp
+* seaJs
 
-​	5.handlebars
+* gulp
 
-​	6.mysql (数据库,控制层下的Dao中的database.js。操作数据库查询获取数据需要掌握一些基础的sql的查询语句)
+* handlebars
 
-​	7.项目文件夹中yoho.sql的文件,需要导入到mysql中具体的配置请进入database.js中进行。
+* express-mysql
 
-## gulp-livereload 实时刷新web页面，大大节省了开发时间，不用手动刷新你懂得
+  ```
+  数据库,控制层下的Dao中的database.js。操作数据库查询获取数据需要掌握一些基础的sql的查询语句
+  ```
 
-a.全局安装 gulp：
+* 项目文件夹中yoho.sql的文件,需要导入到mysql中具体的配置请进入database.js中进行
 
-　　npm install --global gulp
 
-b.作为项目的开发依赖（devDependencies）安装：
 
-　　npm install gulp gulp-livereload --save-dev 命令来安装livereload
+##### gulp-livereload 实时刷新web页面，大大节省了开发时间，不用手动刷新你懂得
 
-c.使用命令来查看你已经安装的npm包
+* 全局安装 gulp：
 
-　　 npm list -g -depth 0
+```
+npm install --global gulp
+```
 
-【具体配置进入gulpfile.js中查看 要注意引入gulp-webserver这个模块】
+* 作为项目的开发依赖（devDependencies）安装：
 
-google浏览器livereload的插件地址
+```
+npm install gulp gulp-livereload --save-dev 
+```
 
-https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
+* 使用命令来查看你已经安装的npm包
 
-====安装后会出现一个圆圈图标点击后可将圆心变为实心这个代表已经开始实时监听刷新
+```
+ npm list -g -depth 0
+```
+
+* [google浏览器livereload的插件地址](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+
+
+* 安装后会出现一个圆圈图标点击后可将圆心变为实心这个代表已经开始实时监听刷新
 
 <img src="https://github.com/tonyjiafan/nodeJs/blob/master/introImg/4.png" />
+
+* 具体配置进入gulpfile.js中查看 要注意引入gulp-webserver这个模块
 
     这个项目结构的搭建还有很多不足之处，还需要不断地改进！
 
 
-## 启动方式
+##### 启动方式
 
-​   1.进入项目文件夹-终端输入-npm install (安装项目所依赖的包)
+* 安装依赖
 
-​	[热启动需要全局安装nodemon 另外nodeJS最好安装稳定版本]
+  ```
+  npm install    //  热启动需要全局安装nodemon 另外nodeJS最好安装稳定版本
+  ```
 
 
-​	2.进入项目文件夹-终端 mac 下需输入 sudo npm run dev将权限提到最高   [在win下 -npm run dev  不能运行就以管理员身份运行]
+* 启动sass监听
 
-​	3.可以单独开启监听sass的任务  终端输入： gulp sass:watch  即可（然后任意修改下scss文件并保存）
+  ```
+  gulp sass:watch  //  修改任意scss文件并保存，即可进行编译
+  ```
 
-​	4.也可直接  终端输入：gulp start 已经配置好监听所有文件，有变化的时候会直接重新执行任务，浏览器页面也会自动实时刷新。
+* 启动项目
 
-​   5.也可直接  终端输入：gulp webserver 启动 livereload。
+  ```
+  npm run dev  //  mac上不能运行请加上sudo 
+  ```
+
+* 通过gulp来启动项目
+
+  ```
+  gulp start  //  gulp start 已经配置好监听所有文件，前提是需要开启webserver的服务
+
+  gulp webserver  //  需要先执行这个命令启动 livereload
+  ```
+
+  ​
+
+  ##### 项目截图
 
 
 <img src="https://github.com/tonyjiafan/nodeJs/blob/master/introImg/1.png" />
